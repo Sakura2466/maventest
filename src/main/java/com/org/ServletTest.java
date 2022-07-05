@@ -7,15 +7,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author wanghao
- * @date 2022/7/5
+ * @author Wang Hao
+ * @since 2022/7/5 23:01
  */
-@WebServlet("/")
+@WebServlet("/servlet")
 public class ServletTest extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        req.setCharacterEncoding("UTF-8");
-        resp.setContentType("text/html;charset=UTF-8");
-        resp.getWriter().write("这是一句servlet程序发送的话");
+        resp.setContentType("text/plain;charset=utf-8");
+        StringBuffer requestURL = req.getRequestURL();
+        resp.getWriter().write("请求url为："+requestURL);
     }
 }
