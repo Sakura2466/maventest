@@ -49,18 +49,19 @@
         <div class="row">
             <div class="login-form">
                 <h2>Login</h2>
-                <form id="loginForm" method="post" autocomplete="off" >
+                <form id="loginForm" action="/web/loginServlet" method="post" autocomplete="off">
                     <fieldset>
-                        <div id="alertInfo" class="alert alert-error clearfix" style="margin-bottom: 5px;width: 195px; padding: 2px 15px 2px 10px;display: none;">
+                        <div id="alertInfo" class="alert alert-error clearfix"
+                             style="margin-bottom: 5px;width: 195px; padding: 2px 15px 2px 10px;display: none;">
                             The username or password you entered is incorrect.
                         </div>
                         <div class="clearfix">
-                            <input type="text" placeholder="用户名" name="loginUsername" autofocus="autofocus">
+                            <input type="text" placeholder="用户名" name="username" autofocus="autofocus">
                         </div>
                         <div class="clearfix">
-                            <input type="password" placeholder="密码" name="loginPassword">
+                            <input type="password" placeholder="密码" name="password">
                         </div>
-                        <button id="loginBtn" class="btn btn-primary" type="button">登录</button>
+                        <button id="loginBtn" class="btn btn-primary" type="submit">登录</button>
                         <button class="btn" type="reset">重置</button>
                     </fieldset>
                 </form>
